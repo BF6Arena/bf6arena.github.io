@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1546561779-7eb2f3e6445c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29uc3RydWN0aW9uJTIwdG93ZXJ8ZW58MHx8fHwxNzYyMjAyMDQ4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+    />
+    <link rel="stylesheet" href="styles.css" data-precedence="next" />
+    <link
+      rel="preload"
+      as="script"
+      fetchPriority="low"
+      href="/_next/static/chunks/webpack-b2b536fc4a3e4448.js"
+    />
+    <script
+      src="/_next/static/chunks/4bd1b696-0c62b2bae3c1ba8f.js"
+      async=""
+    ></script>
+    <script
+      src="/_next/static/chunks/684-a1b7fdb887412ca8.js"
+      async=""
+    ></script>
+    <script
+      src="/_next/static/chunks/main-app-9f4f66c0efa5e0b9.js"
+      async=""
+    ></script>
+    <script
+      src="/_next/static/chunks/874-deff723f8964567e.js"
+      async=""
+    ></script>
+    <script src="/_next/static/chunks/63-79ef43a745f319b6.js" async=""></script>
+    <script
+      src="/_next/static/chunks/app/page-0aadd3176d5d6cfe.js"
+      async=""
+    ></script>
+    <script
+      src="/_next/static/chunks/172-04b91d6c8e6db230.js"
+      async=""
+    ></script>
+    <script src="/_next/static/chunks/71-130bd253366371ae.js" async=""></script>
+    <script
+      src="/_next/static/chunks/app/layout-d048ee0ec0d73f1f.js"
+      async=""
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&amp;display=swap"
+      rel="stylesheet"
+    />
+    <title>Tower Mayhem</title>
+    <meta
+      name="description"
+      content="A private tournament coordination page for Battlefield 6 friends."
+    />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16" />
+    <script>
+      document
+        .querySelectorAll(
+          'body link[rel="icon"], body link[rel="apple-touch-icon"]'
+        )
+        .forEach((el) => document.head.appendChild(el));
+    </script>
+    <script
+      src="/_next/static/chunks/polyfills-42372ed130431b0a.js"
+      nomodule=""
+    ></script>
+  </head>
+  <body class="font-body antialiased bg-background text-foreground">
+    <header
+      class="bg-card/30 backdrop-blur-lg sticky top-0 z-50 w-full border-b border-border"
+    >
+      <div class="container flex h-16 items-center">
+        <a class="flex items-center gap-2 mr-6" href="/"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-tower-control h-6 w-6 text-primary"
+          >
+            <path
+              d="M18.2 12.27 20 6H4l1.8 6.27a1 1 0 0 0 .95.73h10.5a1 1 0 0 0 .96-.73Z"
+            ></path>
+            <path d="M8 13v9"></path>
+            <path d="M16 22v-9"></path>
+            <path d="m9 6 1 7"></path>
+            <path d="m15 6-1 7"></path>
+            <path d="M12 6V2"></path>
+            <path d="M13 2h-2"></path></svg
+          ><span class="font-bold text-lg hidden sm:inline-block"
+            >DuneGoon's BF6 Arena</span
+          ></a
+        >
+        <nav class="flex items-center gap-2 sm:gap-4">
+          <a
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary"
+            href="#signup"
+            >Sign Up</a
+          ><a
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary"
+            href="#event-details"
+            >Tournament</a
+          ><a
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary"
+            href="#tournament-hub"
+            >Tournament Hub</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="flex flex-col">
+        <main class="flex-1">
+          <section
+            id="signup"
+            class="relative w-full h-[60vh] flex items-center justify-center text-center text-foreground"
+          >
+            <img
+              alt="Battlefield-inspired construction tower background image"
+              data-ai-hint="construction tower"
+              decoding="async"
+              data-nimg="fill"
+              class="object-cover"
+              style="
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                color: transparent;
+              "
+              src="https://images.unsplash.com/photo-1546561779-7eb2f3e6445c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29uc3RydWN0aW9uJTIwdG93ZXJ8ZW58MHx8fHwxNzYyMjAyMDQ4fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080"
+            />
+            <div class="absolute inset-0 bg-black/70"></div>
+            <div class="relative z-10 p-4 space-y-4">
+              <h1
+                class="text-4xl md:text-6xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-br from-neutral-50 to-neutral-400"
+              >
+                BF6 Arena Tower Tournament
+              </h1>
+              <p class="max-w-2xl mx-auto text-lg md:text-xl text-neutral-300">
+                8 players. 2 squads. 1 tower.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <div class="max-w-xl mx-auto">
+                  <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm"
+                  >
+                    <div class="flex flex-col space-y-1.5 p-6">
+                      <div
+                        class="text-2xl font-semibold leading-none tracking-tight"
+                      >
+                        Player Information
+                      </div>
+                      <div class="text-sm text-muted-foreground">
+                        All data is handled locally. This is for demonstration
+                        only.
+                      </div>
+                    </div>
+                    <form>
+                      <div class="p-6 pt-0 space-y-4">
+                        <div class="space-y-2">
+                          <label
+                            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                            for="«R5kjrlb»-form-item"
+                            >Battlefield Username</label
+                          ><input
+                            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                            placeholder="e.g., TowerDestroyer99"
+                            id="«R5kjrlb»-form-item"
+                            aria-describedby="«R5kjrlb»-form-item-description"
+                            aria-invalid="false"
+                            name="username"
+                            value=""
+                          />
+                        </div>
+                        <div class="space-y-2">
+                          <label
+                            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                            for="«R9kjrlb»-form-item"
+                            >Discord or Email (Optional)</label
+                          ><input
+                            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                            placeholder="e.g., user#1234 or user@example.com"
+                            id="«R9kjrlb»-form-item"
+                            aria-describedby="«R9kjrlb»-form-item-description"
+                            aria-invalid="false"
+                            name="contact"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                      <div class="flex items-center p-6 pt-0">
+                        <button
+                          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full"
+                          type="submit"
+                        >
+                          Sign Up
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="event-details" class="py-12 md:py-20 bg-card">
+            <div class="container mx-auto px-4">
+              <h2 class="text-3xl font-bold text-center mb-10 text-primary">
+                Tournament Details
+              </h2>
+              <div
+                class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8"
+              >
+                <div
+                  class="rounded-lg border text-card-foreground shadow-sm bg-background border-border"
+                >
+                  <div class="space-y-1.5 p-6 flex flex-row items-center gap-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-calendar w-6 h-6 text-primary"
+                    >
+                      <path d="M8 2v4"></path>
+                      <path d="M16 2v4"></path>
+                      <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                      <path d="M3 10h18"></path>
+                    </svg>
+                    <div
+                      class="text-2xl font-semibold leading-none tracking-tight"
+                    >
+                      Date and Time
+                    </div>
+                  </div>
+                  <div class="p-6 pt-0">
+                    <p class="text-lg font-semibold">
+                      Saturday Nov 8th - 8:00p
+                    </p>
+                    <p class="text-muted-foreground">
+                      Join the
+                      <a
+                        href="https://discord.gg/BD7RTgx8?event=1435323682665795605"
+                        >Discord channel</a
+                      >
+                      at 7:45p
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="rounded-lg border text-card-foreground shadow-sm bg-background border-border"
+                >
+                  <div class="space-y-1.5 p-6 flex flex-row items-center gap-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-info w-6 h-6 text-primary"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M12 16v-4"></path>
+                      <path d="M12 8h.01"></path>
+                    </svg>
+                    <div
+                      class="text-2xl font-semibold leading-none tracking-tight"
+                    >
+                      Tower Attack Mode
+                    </div>
+                  </div>
+                  <div class="p-6 pt-0">
+                    <p class="text-muted-foreground">
+                      Two squads face off — one starting from the bottom, one
+                      from the top. After each round, squads are reshuffled so
+                      every player plays with everyone.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="tournament-hub">
+            <div class="container py-12 md:py-20 mx-auto">
+              <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold text-center mb-10 text-primary">
+                Tournament Hub
+              </h2>
+              </div>
+              <div class="space-y-12">
+                <div
+                  class="rounded-lg border bg-card text-card-foreground shadow-sm"
+                >
+                  <div class="flex flex-col space-y-1.5 p-6">
+                    <div
+                      class="text-2xl font-semibold leading-none tracking-tight flex items-center gap-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-trophy w-6 h-6 text-primary"
+                      >
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                        <path d="M4 22h16"></path>
+                        <path
+                          d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"
+                        ></path>
+                        <path
+                          d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"
+                        ></path>
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg
+                      >Leaderboard
+                    </div>
+                  </div>
+                  <div class="p-6 pt-0">
+                    <div class="relative w-full overflow-auto">
+                      <table class="w-full caption-bottom text-sm">
+                        <thead class="[&amp;_tr]:border-b">
+                          <tr
+                            class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+                          >
+                            <th
+                              class="h-12 px-4 align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 w-12 text-center"
+                            >
+                              Rank
+                            </th>
+                            <th
+                              class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0"
+                            >
+                              Player
+                            </th>
+                            <th
+                              class="h-12 px-4 align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              Kills
+                            </th>
+                            <th
+                              class="h-12 px-4 align-middle font-medium text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              Wins
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="[&amp;_tr:last-child]:border-0">
+                          <tr
+                            class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted bg-primary/10"
+                          >
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium text-center"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-crown w-6 h-6 text-yellow-400 mx-auto"
+                              >
+                                <path
+                                  d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"
+                                ></path>
+                                <path d="M5 21h14"></path>
+                              </svg>
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium"
+                            >
+                              Casey V
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              0
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              0
+                            </td>
+                          </tr>
+                          <tr
+                            class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted bg-primary/10"
+                          >
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium text-center"
+                            >
+                              2
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium"
+                            >
+                              Corey M
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              0
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              0
+                            </td>
+                          </tr>
+                          <tr
+                            class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted bg-primary/10"
+                          >
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium text-center"
+                            >
+                              3
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium"
+                            >
+                              Julian M
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              0
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              0
+                            </td>
+                          </tr>
+                          <tr
+                            class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+                          >
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium text-center"
+                            >
+                              4
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium"
+                            >
+                              Julian G
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              0
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              0
+                            </td>
+                          </tr>
+                          <tr
+                            class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+                          >
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium text-center"
+                            >
+                              5
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium"
+                            >
+                              Anthony G
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              0
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              0
+                            </td>
+                          </tr>
+                          <tr
+                            class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+                          >
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium text-center"
+                            >
+                              6
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium"
+                            >
+                              TBD1
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              0
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              0
+                            </td>
+                          </tr>
+                          <tr
+                            class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+                          >
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium text-center"
+                            >
+                              7
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium"
+                            >
+                              TBD2
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              0
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              0
+                            </td>
+                          </tr>
+                          <tr
+                            class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+                          >
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium text-center"
+                            >
+                              8
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 font-medium"
+                            >
+                              TBD3
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              0
+                            </td>
+                            <td
+                              class="p-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-right"
+                            >
+                              0
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="rounded-lg border bg-card text-card-foreground shadow-sm"
+                >
+                  <div class="flex flex-col space-y-1.5 p-6">
+                    <div
+                      class="text-2xl font-semibold leading-none tracking-tight flex items-center gap-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-users w-6 h-6 text-primary"
+                      >
+                        <path
+                          d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
+                        ></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+                      >Match Schedule
+                    </div>
+                  </div>
+                  <div class="p-6 pt-0 space-y-8">
+                    <div class="p-6 border rounded-lg bg-background/50">
+                      <h4
+                        class="font-bold text-center text-xl mb-6 text-primary"
+                      >
+                        Match #<!-- -->1
+                      </h4>
+                      <div class="flex justify-around items-start">
+                        <div class="flex flex-col items-center">
+                          <div class="flex items-center gap-2 mb-4">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-shield w-6 h-6 text-muted-foreground"
+                            >
+                              <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                              ></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">
+                              Squad
+                              <!-- -->Alpha
+                            </h3>
+                          </div>
+                          <ul
+                            class="space-y-1 text-center text-muted-foreground"
+                          >
+                            <li>Casey V</li>
+                            <li>Corey M</li>
+                            <li>Julian M</li>
+                            <li>Julian G</li>
+                          </ul>
+                        </div>
+                        <div
+                          class="self-center text-2xl font-bold text-muted-foreground px-4"
+                        >
+                          VS
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <div class="flex items-center gap-2 mb-4">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-shield w-6 h-6 text-muted-foreground"
+                            >
+                              <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                              ></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">
+                              Squad
+                              <!-- -->Bravo
+                            </h3>
+                          </div>
+                          <ul
+                            class="space-y-1 text-center text-muted-foreground"
+                          >
+                            <li>Anthony G</li>
+                            <li>TBD1</li>
+                            <li>TBD2</li>
+                            <li>TBD3</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="mt-6 pt-4 border-t border-dashed">
+                        <div class="flex items-center justify-center gap-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-shield-alert w-5 h-5 text-primary"
+                          >
+                            <path
+                              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                            ></path>
+                            <path d="M12 8v4"></path>
+                            <path d="M12 16h.01"></path>
+                          </svg>
+                          <h5 class="font-semibold">Special Rules</h5>
+                        </div>
+                        <p class="text-muted-foreground text-center mt-2">
+                          Single life. One round. Eliminate the other squad to
+                          win.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-6 border rounded-lg bg-background/50">
+                      <h4
+                        class="font-bold text-center text-xl mb-6 text-primary"
+                      >
+                        Match #<!-- -->2
+                      </h4>
+                      <div class="flex justify-around items-start">
+                        <div class="flex flex-col items-center">
+                          <div class="flex items-center gap-2 mb-4">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-shield w-6 h-6 text-muted-foreground"
+                            >
+                              <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                              ></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">
+                              Squad
+                              <!-- -->Charlie
+                            </h3>
+                          </div>
+                          <ul
+                            class="space-y-1 text-center text-muted-foreground"
+                          >
+                            <li>Casey V</li>
+                            <li>Anthony G</li>
+                            <li>TBD1</li>
+                            <li>TBD2</li>
+                          </ul>
+                        </div>
+                        <div
+                          class="self-center text-2xl font-bold text-muted-foreground px-4"
+                        >
+                          VS
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <div class="flex items-center gap-2 mb-4">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-shield w-6 h-6 text-muted-foreground"
+                            >
+                              <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                              ></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">
+                              Squad
+                              <!-- -->Delta
+                            </h3>
+                          </div>
+                          <ul
+                            class="space-y-1 text-center text-muted-foreground"
+                          >
+                            <li>Corey M</li>
+                            <li>Julian M</li>
+                            <li>Julian G</li>
+                            <li>TBD3</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="mt-6 pt-4 border-t border-dashed">
+                        <div class="flex items-center justify-center gap-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-shield-alert w-5 h-5 text-primary"
+                          >
+                            <path
+                              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                            ></path>
+                            <path d="M12 8v4"></path>
+                            <path d="M12 16h.01"></path>
+                          </svg>
+                          <h5 class="font-semibold">Special Rules</h5>
+                        </div>
+                        <p class="text-muted-foreground text-center mt-2">
+                          Fully eliminate opposing squad with 30s respawns.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-6 border rounded-lg bg-background/50">
+                      <h4
+                        class="font-bold text-center text-xl mb-6 text-primary"
+                      >
+                        Match #<!-- -->3
+                      </h4>
+                      <div class="flex justify-around items-start">
+                        <div class="flex flex-col items-center">
+                          <div class="flex items-center gap-2 mb-4">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-shield w-6 h-6 text-muted-foreground"
+                            >
+                              <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                              ></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">
+                              Squad
+                              <!-- -->Echo
+                            </h3>
+                          </div>
+                          <ul
+                            class="space-y-1 text-center text-muted-foreground"
+                          >
+                            <li>Casey V</li>
+                            <li>Corey M</li>
+                            <li>Anthony G</li>
+                            <li>TBD3</li>
+                          </ul>
+                        </div>
+                        <div
+                          class="self-center text-2xl font-bold text-muted-foreground px-4"
+                        >
+                          VS
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <div class="flex items-center gap-2 mb-4">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-shield w-6 h-6 text-muted-foreground"
+                            >
+                              <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                              ></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">
+                              Squad
+                              <!-- -->Foxtrot
+                            </h3>
+                          </div>
+                          <ul
+                            class="space-y-1 text-center text-muted-foreground"
+                          >
+                            <li>Julian M</li>
+                            <li>Julian G</li>
+                            <li>TBD1</li>
+                            <li>TBD2</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="mt-6 pt-4 border-t border-dashed">
+                        <div class="flex items-center justify-center gap-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-shield-alert w-5 h-5 text-primary"
+                          >
+                            <path
+                              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                            ></path>
+                            <path d="M12 8v4"></path>
+                            <path d="M12 16h.01"></path>
+                          </svg>
+                          <h5 class="font-semibold">Special Rules</h5>
+                        </div>
+                        <p class="text-muted-foreground text-center mt-2">
+                          Single life. One round. Eliminate the other squad to
+                          win.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-6 border rounded-lg bg-background/50">
+                      <h4
+                        class="font-bold text-center text-xl mb-6 text-primary"
+                      >
+                        Match #<!-- -->4
+                      </h4>
+                      <div class="flex justify-around items-start">
+                        <div class="flex flex-col items-center">
+                          <div class="flex items-center gap-2 mb-4">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-shield w-6 h-6 text-muted-foreground"
+                            >
+                              <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                              ></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">
+                              Squad
+                              <!-- -->Golf
+                            </h3>
+                          </div>
+                          <ul
+                            class="space-y-1 text-center text-muted-foreground"
+                          >
+                            <li>Casey V</li>
+                            <li>Julian M</li>
+                            <li>TBD1</li>
+                            <li>TBD3</li>
+                          </ul>
+                        </div>
+                        <div
+                          class="self-center text-2xl font-bold text-muted-foreground px-4"
+                        >
+                          VS
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <div class="flex items-center gap-2 mb-4">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-shield w-6 h-6 text-muted-foreground"
+                            >
+                              <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                              ></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">
+                              Squad
+                              <!-- -->Hotel
+                            </h3>
+                          </div>
+                          <ul
+                            class="space-y-1 text-center text-muted-foreground"
+                          >
+                            <li>Corey M</li>
+                            <li>Julian G</li>
+                            <li>Anthony G</li>
+                            <li>TBD2</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="mt-6 pt-4 border-t border-dashed">
+                        <div class="flex items-center justify-center gap-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-shield-alert w-5 h-5 text-primary"
+                          >
+                            <path
+                              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                            ></path>
+                            <path d="M12 8v4"></path>
+                            <path d="M12 16h.01"></path>
+                          </svg>
+                          <h5 class="font-semibold">Special Rules</h5>
+                        </div>
+                        <p class="text-muted-foreground text-center mt-2">
+                          Fully eliminate opposing squad with 30s respawns.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-6 border rounded-lg bg-background/50">
+                      <h4
+                        class="font-bold text-center text-xl mb-6 text-primary"
+                      >
+                        Match #<!-- -->5
+                      </h4>
+                      <div class="flex justify-around items-start">
+                        <div class="flex flex-col items-center">
+                          <div class="flex items-center gap-2 mb-4">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-shield w-6 h-6 text-muted-foreground"
+                            >
+                              <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                              ></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">
+                              Squad
+                              <!-- -->India
+                            </h3>
+                          </div>
+                          <ul
+                            class="space-y-1 text-center text-muted-foreground"
+                          >
+                            <li>Casey V</li>
+                            <li>Julian G</li>
+                            <li>Anthony G</li>
+                            <li>TBD2</li>
+                          </ul>
+                        </div>
+                        <div
+                          class="self-center text-2xl font-bold text-muted-foreground px-4"
+                        >
+                          VS
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <div class="flex items-center gap-2 mb-4">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-shield w-6 h-6 text-muted-foreground"
+                            >
+                              <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                              ></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">
+                              Squad
+                              <!-- -->Juliett
+                            </h3>
+                          </div>
+                          <ul
+                            class="space-y-1 text-center text-muted-foreground"
+                          >
+                            <li>Corey M</li>
+                            <li>Julian M</li>
+                            <li>TBD1</li>
+                            <li>TBD3</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="mt-6 pt-4 border-t border-dashed">
+                        <div class="flex items-center justify-center gap-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-shield-alert w-5 h-5 text-primary"
+                          >
+                            <path
+                              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                            ></path>
+                            <path d="M12 8v4"></path>
+                            <path d="M12 16h.01"></path>
+                          </svg>
+                          <h5 class="font-semibold">Special Rules</h5>
+                        </div>
+                        <p class="text-muted-foreground text-center mt-2">
+                          Single life. One round. Eliminate the other squad to
+                          win.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-6 border rounded-lg bg-background/50">
+                      <h4
+                        class="font-bold text-center text-xl mb-6 text-primary"
+                      >
+                        Match #<!-- -->6
+                      </h4>
+                      <div class="flex justify-around items-start">
+                        <div class="flex flex-col items-center">
+                          <div class="flex items-center gap-2 mb-4">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-shield w-6 h-6 text-muted-foreground"
+                            >
+                              <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                              ></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">
+                              Squad
+                              <!-- -->Kilo
+                            </h3>
+                          </div>
+                          <ul
+                            class="space-y-1 text-center text-muted-foreground"
+                          >
+                            <li>Casey V</li>
+                            <li>Corey M</li>
+                            <li>TBD1</li>
+                            <li>TBD2</li>
+                          </ul>
+                        </div>
+                        <div
+                          class="self-center text-2xl font-bold text-muted-foreground px-4"
+                        >
+                          VS
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <div class="flex items-center gap-2 mb-4">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-shield w-6 h-6 text-muted-foreground"
+                            >
+                              <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                              ></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">
+                              Squad
+                              <!-- -->Lima
+                            </h3>
+                          </div>
+                          <ul
+                            class="space-y-1 text-center text-muted-foreground"
+                          >
+                            <li>Julian M</li>
+                            <li>Julian G</li>
+                            <li>Anthony G</li>
+                            <li>TBD3</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="mt-6 pt-4 border-t border-dashed">
+                        <div class="flex items-center justify-center gap-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-shield-alert w-5 h-5 text-primary"
+                          >
+                            <path
+                              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                            ></path>
+                            <path d="M12 8v4"></path>
+                            <path d="M12 16h.01"></path>
+                          </svg>
+                          <h5 class="font-semibold">Special Rules</h5>
+                        </div>
+                        <p class="text-muted-foreground text-center mt-2">
+                          Fully eliminate opposing squad with 30s respawns.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-6 border rounded-lg bg-background/50">
+                      <h4
+                        class="font-bold text-center text-xl mb-6 text-primary"
+                      >
+                        Match #<!-- -->7
+                      </h4>
+                      <div class="flex justify-around items-start">
+                        <div class="flex flex-col items-center">
+                          <div class="flex items-center gap-2 mb-4">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-shield w-6 h-6 text-muted-foreground"
+                            >
+                              <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                              ></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">
+                              Squad
+                              <!-- -->Mike
+                            </h3>
+                          </div>
+                          <ul
+                            class="space-y-1 text-center text-muted-foreground"
+                          >
+                            <li>Casey V</li>
+                            <li>Julian M</li>
+                            <li>Anthony G</li>
+                            <li>TBD3</li>
+                          </ul>
+                        </div>
+                        <div
+                          class="self-center text-2xl font-bold text-muted-foreground px-4"
+                        >
+                          VS
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <div class="flex items-center gap-2 mb-4">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              class="lucide lucide-shield w-6 h-6 text-muted-foreground"
+                            >
+                              <path
+                                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                              ></path>
+                            </svg>
+                            <h3 class="text-xl font-bold">
+                              Squad
+                              <!-- -->November
+                            </h3>
+                          </div>
+                          <ul
+                            class="space-y-1 text-center text-muted-foreground"
+                          >
+                            <li>Corey M</li>
+                            <li>Julian G</li>
+                            <li>TBD1</li>
+                            <li>TBD2</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="mt-6 pt-4 border-t border-dashed">
+                        <div class="flex items-center justify-center gap-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-shield-alert w-5 h-5 text-primary"
+                          >
+                            <path
+                              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                            ></path>
+                            <path d="M12 8v4"></path>
+                            <path d="M12 16h.01"></path>
+                          </svg>
+                          <h5 class="font-semibold">Special Rules</h5>
+                        </div>
+                        <p class="text-muted-foreground text-center mt-2">
+                          Single life. One round. Eliminate the other squad to
+                          win.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </main>
+  </body>
+</html>
